@@ -12,10 +12,10 @@
 
   <!-- NuGet dependencies shared across projects -->
   <PropertyGroup>
-    <MicrosoftAspNetCorePackageVersion>6.0.3</MicrosoftAspNetCorePackageVersion>
+    <MicrosoftAspNetCorePackageVersion>6.0.6</MicrosoftAspNetCorePackageVersion>
     <NewtonsoftJsonPackageVersion>13.0.1</NewtonsoftJsonPackageVersion>
-    <NuGetPackageVersion>6.1.0</NuGetPackageVersion>
-    <XUnitPackageVersion>2.4.1</XUnitPackageVersion>
+    <NuGetPackageVersion>6.2.1</NuGetPackageVersion>
+    <XUnitPackageVersion>2.4.5</XUnitPackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -23,8 +23,8 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
-    <PackageReference Include="Moq" Version="4.17.2" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
+    <PackageReference Include="Moq" Version="4.18.1" />
     <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
     <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitPackageVersion)">
       <PrivateAssets>all</PrivateAssets>
