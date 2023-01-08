@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+
+  baget:
+    image: eassbhhtgu/baget:latest
+    environment:
+      ApiKey: ${NuGetServerApiKey:-8e7b324ee43b689f77c2f95b099fd6f5}
+      Storage__Type: FileSystem
+      Storage__Path: /var/baget
+      Database__Type: Sqlite
+      Database__ConnectionString: Data Source=/var/baget/baget.db
+      Search__Type: Database
+      ASPNETCORE_ENVIRONMENT: Production
+      ASPNETCORE_HTTPS_PORT: "443"
+      ASPNETCORE_URLS: https://+
+      ASPNETCORE_Kestrel__Certificates__Default__KeyPath: /run/secrets/localhost.key
+      ASPNETCORE_Kestrel__Certificates__Default__Path: /run/secrets/localhost.crt
+    ports:
+    - 443:443/tcp
+    secrets:
+    - source: localhost.crt
+    - source: localhost.key
+    volumes:
+    - ${USERPROFILE}\baget-data:/var/baget:rw
+
+secrets:
+  localhost.crt:
+    file: ${USERPROFILE}\.aspnet\https\nuget.crt
+  localhost.key:
+    file: ${USERPROFILE}\.aspnet\https\nuget.key
