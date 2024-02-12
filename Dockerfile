@@ -5,7 +5,7 @@ EXPOSE 433
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY /src .
-RUN dotnet restore BaGet
+RUN dotnet restore BaGet --source https://api.nuget.org/v3/index.json
 RUN dotnet build BaGet -c Release -o /app
 
 FROM build AS publish
