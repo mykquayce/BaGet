@@ -26,6 +26,6 @@ services:
 
 secrets:
   localhost.crt:
-    file: ${USERPROFILE}\.aspnet\https\nuget.crt
+    file: ${USERPROFILE}\.aspnet\https\localhost.crt
   localhost.key:
-    file: ${USERPROFILE}\.aspnet\https\nuget.key
+    file: ${USERPROFILE}\.aspnet\https\localhost.key
