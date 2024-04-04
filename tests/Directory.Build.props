@@ -11,20 +11,20 @@
 
   <!-- NuGet dependencies shared across projects -->
   <PropertyGroup>
-    <MicrosoftAspNetCorePackageVersion>7.0.12</MicrosoftAspNetCorePackageVersion>
+    <MicrosoftAspNetCorePackageVersion>8.0.3</MicrosoftAspNetCorePackageVersion>
     <NewtonsoftJsonPackageVersion>13.0.3</NewtonsoftJsonPackageVersion>
-    <NuGetPackageVersion>6.7.0</NuGetPackageVersion>
-    <XUnitPackageVersion>2.5.0</XUnitPackageVersion>
-    <XUnitRunnerPackageVersion>2.5.0</XUnitRunnerPackageVersion>
+    <NuGetPackageVersion>6.9.1</NuGetPackageVersion>
+    <XUnitPackageVersion>2.7.0</XUnitPackageVersion>
+    <XUnitRunnerPackageVersion>2.5.7</XUnitRunnerPackageVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="coverlet.collector" Version="6.0.0">
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
-    <PackageReference Include="Moq" Version="4.20.69" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+    <PackageReference Include="Moq" Version="4.20.70" />
     <PackageReference Include="xunit" Version="$(XUnitPackageVersion)" />
     <PackageReference Include="xunit.runner.visualstudio" Version="$(XUnitRunnerPackageVersion)">
       <PrivateAssets>all</PrivateAssets>
